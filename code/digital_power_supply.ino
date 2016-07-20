@@ -1,10 +1,18 @@
+/*
+ * References
+ *     http://playground.arduino.cc/Code/Timer1
+ */
+
 #include "Arduino.h"
 //#include "pins_arduino.h"
 #include "system/nokia_lcd.h"
 #include "system/pins.h"
+#include "timer/TimerOne.h"
 
 volatile uint16_t counter;
 volatile uint16_t sub_counter = 100;
+
+void callback();
 
 // the setup function runs once when you press reset or power the board
 void setup() {
@@ -20,6 +28,11 @@ void setup() {
 
 	char string[] = "Welcome,    Daniel!"; //String("Hello World!");
 	LcdString(string);
+
+	Timer1.initialize(200000);
+	Timer1.pwm(10, 16);
+//	Timer1.setPwmDuty(led_builtin, 16);
+	Timer1.attachInterrupt(callback);
 }
 
 // the loop function runs over and over again forever
@@ -31,11 +44,11 @@ void loop() {
 	}
 //	if (counter < ((counter%100)/2)){
 	if (counter < sub_counter){
-		  digitalWrite(led_builtin, HIGH);   // turn the LED on (HIGH is the voltage level)
+//		  digitalWrite(led_builtin, HIGH);   // turn the LED on (HIGH is the voltage level)
 //		  digitalWrite(led_white, LOW);
 	}
 	else{
-		  digitalWrite(led_builtin, LOW);    // turn the LED off by making the voltage LOW
+//		  digitalWrite(led_builtin, LOW);    // turn the LED off by making the voltage LOW
 //		  digitalWrite(led_white, HIGH);
 	}
 	if (!counter){
@@ -46,4 +59,8 @@ void loop() {
 	counter++;
 	counter%=1000;
 	delay(1);
+}
+
+void callback() {
+	digitalWrite(led_builtin, digitalRead(led_builtin)^1);
 }
