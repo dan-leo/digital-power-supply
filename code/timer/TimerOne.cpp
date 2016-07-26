@@ -50,6 +50,8 @@ void TimerOne::initialize(long microseconds)
 {
   TCCR1A = 0;                 // clear control register A 
   TCCR1B = _BV(WGM13);        // set mode 8: phase and frequency correct pwm, stop the timer
+  // TODO: init timer for nano
+  //  TIMSK1
   setPeriod(microseconds);
 }
 

@@ -30,7 +30,7 @@ void setup() {
 	LcdString(string);
 
 	Timer1.initialize(200000);
-	Timer1.pwm(10, 16);
+	Timer1.pwm(12, 16);
 //	Timer1.setPwmDuty(led_builtin, 16);
 	Timer1.attachInterrupt(callback);
 }
