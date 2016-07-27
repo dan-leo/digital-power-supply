@@ -33,6 +33,7 @@ void setup() {
 	Timer1.pwm(12, 16);
 //	Timer1.setPwmDuty(led_builtin, 16);
 	Timer1.attachInterrupt(callback);
+	analogReference(INTERNAL);
 }
 
 // the loop function runs over and over again forever
