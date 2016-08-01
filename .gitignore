@@ -1,6 +1,6 @@
 code/Release
 
-
+*.pyc
 
 # Compiled Object files
 *.slo

@@ -1,10 +1,15 @@
 def isValidMessage(message):
-    # Test wether the received string meets the following criteria:
-    #   1) contains string "voltage" or "current" followed by a value, separated by a period
-    #   2) value must be convertable to an integer
-    return 0
+    try:
+        if "voltage" in message or "current" in message:
+	    	if len(message) > 8 and message[7] == '.':
+	    		if message[8:].replace('.','',1).isdigit():
+	    		    return 1
+        return 0
+    except TypeError:
+        return 0
 
 def calcError(measured, desired):
-    # Return the absolute error of the measured value compared to the desired value as a percentage.
-    # Returned value must be rounded to the nearest integer
-    return 0
+    try:
+        return int(round(100*abs(measured - desired)/desired))
+    except TypeError:
+        return -1
