@@ -1,0 +1,8 @@
+The LM358 is different from ordinary dual opamps:
+It is low power (the first one) so its supply current is low.
+2) Its minimum supply voltage is 3.0V.
+3) Its output goes to the negative supply voltage if its sinking load current is low.
+4) Its inputs work well at the negative supply voltage.
+5) It has crossover distortion.
+6) Its max frequency for only half the max output voltage is 6kHz.
+
