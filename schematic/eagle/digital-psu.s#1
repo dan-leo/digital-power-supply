@@ -20624,7 +20624,7 @@ distributor RS Components</description>
 <pinref part="JP2" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="N$33" class="0">
+<net name="N$22" class="0">
 <segment>
 <pinref part="S2" gate="1" pin="S"/>
 <wire x1="241.3" y1="218.44" x2="236.22" y2="218.44" width="0.1524" layer="91"/>

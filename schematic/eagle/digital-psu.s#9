@@ -20077,6 +20077,8 @@ distributor RS Components</description>
 <pinref part="JP1" gate="G$1" pin="2"/>
 <wire x1="147.32" y1="276.86" x2="144.78" y2="276.86" width="0.1524" layer="91"/>
 <junction x="144.78" y="276.86"/>
+<wire x1="147.32" y1="276.86" x2="149.86" y2="276.86" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="279.4" x2="149.86" y2="279.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="LED2" gate="G$1" pin="C"/>
