@@ -18760,24 +18760,6 @@ http://www.ee.siue.edu/~alozows/library/datasheets/BFR96.pdf</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="2N3704" prefix="T">
-<description>&lt;b&gt;NPN TRANSISTOR&lt;/b&gt;</description>
-<gates>
-<gate name="G$1" symbol="NPN" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="TO92">
-<connects>
-<connect gate="G$1" pin="B" pad="1"/>
-<connect gate="G$1" pin="C" pad="2"/>
-<connect gate="G$1" pin="E" pad="3"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="*-NPN-" prefix="T" uservalue="yes">
 <description>NPN Transistror&lt;p&gt;
 BF959 corrected 2008.03.06&lt;br&gt;</description>
@@ -19766,7 +19748,6 @@ distributor RS Components</description>
 <part name="C10" library="rcl" deviceset="C-EU" device="C0805" value="100p"/>
 <part name="R21" library="eagle-ltspice" deviceset="R" device="" value="1k"/>
 <part name="R22" library="rcl" deviceset="R-US_" device="VTA52" value="0.1"/>
-<part name="T6" library="transistor" deviceset="2N3704" device=""/>
 <part name="C11" library="rcl" deviceset="C-EU" device="C0805" value="200n"/>
 <part name="C12" library="resistor" deviceset="CPOL-EU" device="E5-10.5" value="10uF"/>
 <part name="D12" library="diode" deviceset="1N4942" device=""/>
@@ -19810,6 +19791,7 @@ distributor RS Components</description>
 <part name="T2" library="transistor" deviceset="*-NPN-" device="TO92-EBC"/>
 <part name="T7" library="transistor" deviceset="*-NPN-" device="TO92-EBC"/>
 <part name="VCC" library="con-wago-500" deviceset="W237-103" device="" value="VNEG"/>
+<part name="T1" library="transistor" deviceset="*-NPN-" device="TO92-EBC"/>
 </parts>
 <sheets>
 <sheet>
@@ -19873,7 +19855,6 @@ distributor RS Components</description>
 <instance part="C10" gate="G$1" x="312.42" y="271.78" rot="R90"/>
 <instance part="R21" gate="G$1" x="332.74" y="276.86" rot="R270"/>
 <instance part="R22" gate="G$1" x="312.42" y="236.22"/>
-<instance part="T6" gate="G$1" x="297.18" y="251.46"/>
 <instance part="C11" gate="G$1" x="281.94" y="251.46" rot="R180"/>
 <instance part="C12" gate="G$1" x="322.58" y="251.46"/>
 <instance part="D12" gate="1" x="317.5" y="248.92" rot="R90"/>
@@ -19927,6 +19908,7 @@ distributor RS Components</description>
 <instance part="VCC" gate="-1" x="60.96" y="226.06"/>
 <instance part="VCC" gate="-2" x="60.96" y="220.98"/>
 <instance part="VCC" gate="-3" x="60.96" y="215.9"/>
+<instance part="T1" gate="G$1" x="297.18" y="251.46"/>
 </instances>
 <busses>
 </busses>
@@ -19984,11 +19966,11 @@ distributor RS Components</description>
 <segment>
 <pinref part="R22" gate="G$1" pin="1"/>
 <wire x1="307.34" y1="236.22" x2="299.72" y2="236.22" width="0.1524" layer="91"/>
-<pinref part="T6" gate="G$1" pin="E"/>
 <wire x1="299.72" y1="236.22" x2="299.72" y2="246.38" width="0.1524" layer="91"/>
 <wire x1="299.72" y1="236.22" x2="299.72" y2="233.68" width="0.1524" layer="91"/>
 <junction x="299.72" y="236.22"/>
 <pinref part="SUPPLY12" gate="GND" pin="GND"/>
+<pinref part="T1" gate="G$1" pin="E"/>
 </segment>
 <segment>
 <wire x1="88.9" y1="284.48" x2="83.82" y2="284.48" width="0.1524" layer="91"/>
@@ -20418,8 +20400,8 @@ distributor RS Components</description>
 <wire x1="279.4" y1="274.32" x2="299.72" y2="274.32" width="0.1524" layer="91"/>
 <junction x="299.72" y="274.32"/>
 <pinref part="IC2" gate="A" pin="OUT"/>
-<pinref part="T6" gate="G$1" pin="C"/>
 <wire x1="299.72" y1="256.54" x2="299.72" y2="274.32" width="0.1524" layer="91"/>
+<pinref part="T1" gate="G$1" pin="C"/>
 </segment>
 </net>
 <net name="N$24" class="0">
@@ -20666,12 +20648,12 @@ distributor RS Components</description>
 <segment>
 <pinref part="R29" gate="G$1" pin="1"/>
 <wire x1="287.02" y1="279.4" x2="287.02" y2="251.46" width="0.1524" layer="91"/>
-<pinref part="T6" gate="G$1" pin="B"/>
 <wire x1="287.02" y1="251.46" x2="294.64" y2="251.46" width="0.1524" layer="91"/>
 <wire x1="287.02" y1="251.46" x2="287.02" y2="236.22" width="0.1524" layer="91"/>
 <junction x="287.02" y="251.46"/>
 <pinref part="R30" gate="G$1" pin="1"/>
 <wire x1="287.02" y1="236.22" x2="281.94" y2="236.22" width="0.1524" layer="91"/>
+<pinref part="T1" gate="G$1" pin="B"/>
 </segment>
 </net>
 <net name="N$37" class="0">
