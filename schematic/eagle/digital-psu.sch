@@ -20704,10 +20704,13 @@ distributor RS Components</description>
 <wire x1="307.34" y1="264.16" x2="304.8" y2="264.16" width="0.1524" layer="91"/>
 <pinref part="C10" gate="G$1" pin="1"/>
 <wire x1="304.8" y1="264.16" x2="274.32" y2="264.16" width="0.1524" layer="91"/>
-<wire x1="274.32" y1="264.16" x2="254" y2="264.16" width="0.1524" layer="91"/>
 <wire x1="309.88" y1="271.78" x2="304.8" y2="271.78" width="0.1524" layer="91"/>
-<wire x1="304.8" y1="271.78" x2="304.8" y2="264.16" width="0.1524" layer="91"/>
 <wire x1="274.32" y1="271.78" x2="274.32" y2="264.16" width="0.1524" layer="91"/>
+<wire x1="254" y1="264.16" x2="274.32" y2="264.16" width="0.1524" layer="91"/>
+<junction x="254" y="264.16"/>
+<junction x="274.32" y="264.16"/>
+<wire x1="304.8" y1="264.16" x2="304.8" y2="271.78" width="0.1524" layer="91"/>
+<junction x="304.8" y="264.16"/>
 </segment>
 </net>
 </nets>
