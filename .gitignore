@@ -1,4 +1,13 @@
 code/Release
+schematic/.*
+
+*.log
+*.net
+*.op.raw
+*.raw
+
+
+.s#*
 
 *.pyc
 
