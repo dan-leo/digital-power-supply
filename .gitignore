@@ -9,6 +9,15 @@ schematic/.*
 
 .s#*
 
+schematic/.*
+
+*.log
+*.net
+*.op.raw
+*.raw
+
+*.s#*
+
 *.pyc
 
 # Compiled Object files
