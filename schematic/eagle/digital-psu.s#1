@@ -20339,25 +20339,15 @@ distributor RS Components</description>
 <wire x1="213.36" y1="254" x2="198.12" y2="254" width="0.1524" layer="91"/>
 <pinref part="R11" gate="G$1" pin="1"/>
 <wire x1="172.72" y1="241.3" x2="190.5" y2="241.3" width="0.1524" layer="91"/>
-<wire x1="190.5" y1="243.84" x2="190.5" y2="254" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="241.3" x2="190.5" y2="254" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="254" x2="185.42" y2="254" width="0.1524" layer="91"/>
 <pinref part="C13" gate="G$1" pin="2"/>
 <wire x1="198.12" y1="254" x2="190.5" y2="254" width="0.1524" layer="91"/>
 <junction x="198.12" y="254"/>
 <junction x="190.5" y="254"/>
-<wire x1="190.5" y1="241.3" x2="190.5" y2="243.84" width="0.1524" layer="91"/>
-<pinref part="R12" gate="/1" pin="E"/>
-<pinref part="R12" gate="/2" pin="E"/>
-<wire x1="213.36" y1="243.84" x2="198.12" y2="243.84" width="0.1524" layer="91"/>
-<pinref part="R13" gate="G$1" pin="1"/>
-<wire x1="198.12" y1="241.3" x2="198.12" y2="243.84" width="0.1524" layer="91"/>
-<junction x="198.12" y="243.84"/>
-<wire x1="190.5" y1="243.84" x2="198.12" y2="243.84" width="0.1524" layer="91"/>
-<junction x="190.5" y="243.84"/>
 <pinref part="IC1" gate="B" pin="-IN"/>
 <wire x1="154.94" y1="251.46" x2="154.94" y2="241.3" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="241.3" x2="170.18" y2="241.3" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="241.3" x2="172.72" y2="241.3" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="241.3" x2="172.72" y2="241.3" width="0.1524" layer="91"/>
 <junction x="172.72" y="241.3"/>
 </segment>
 </net>
@@ -20716,6 +20706,16 @@ distributor RS Components</description>
 <junction x="276.86" y="203.2"/>
 <wire x1="294.64" y1="208.28" x2="294.64" y2="213.36" width="0.1524" layer="91"/>
 <junction x="294.64" y="213.36"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="R12" gate="/1" pin="E"/>
+<pinref part="R12" gate="/2" pin="E"/>
+<wire x1="213.36" y1="243.84" x2="198.12" y2="243.84" width="0.1524" layer="91"/>
+<junction x="198.12" y="243.84"/>
+<pinref part="R13" gate="G$1" pin="1"/>
+<wire x1="198.12" y1="241.3" x2="198.12" y2="243.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

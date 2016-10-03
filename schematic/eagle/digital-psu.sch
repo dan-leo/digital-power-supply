@@ -19838,8 +19838,8 @@ distributor RS Components</description>
 <instance part="R13" gate="G$1" x="198.12" y="236.22" rot="R270"/>
 <instance part="SUPPLY11" gate="GND" x="198.12" y="226.06"/>
 <instance part="IC1" gate="P" x="228.6" y="284.48"/>
-<instance part="R12" gate="/1" x="198.12" y="248.92" rot="MR180"/>
-<instance part="R12" gate="/2" x="213.36" y="248.92" rot="MR180"/>
+<instance part="R12" gate="/1" x="198.12" y="248.92"/>
+<instance part="R12" gate="/2" x="213.36" y="248.92"/>
 <instance part="D10" gate="1" x="241.3" y="307.34" rot="R180"/>
 <instance part="R14" gate="G$1" x="254" y="254" rot="R90"/>
 <instance part="R15" gate="G$1" x="299.72" y="279.4" rot="R90"/>
@@ -20334,21 +20334,21 @@ distributor RS Components</description>
 </net>
 <net name="N$20" class="0">
 <segment>
-<pinref part="R12" gate="/1" pin="A"/>
-<pinref part="R12" gate="/2" pin="A"/>
-<wire x1="213.36" y1="254" x2="198.12" y2="254" width="0.1524" layer="91"/>
 <pinref part="R11" gate="G$1" pin="1"/>
 <wire x1="172.72" y1="241.3" x2="190.5" y2="241.3" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="241.3" x2="190.5" y2="254" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="254" x2="185.42" y2="254" width="0.1524" layer="91"/>
 <pinref part="C13" gate="G$1" pin="2"/>
-<wire x1="198.12" y1="254" x2="190.5" y2="254" width="0.1524" layer="91"/>
-<junction x="198.12" y="254"/>
-<junction x="190.5" y="254"/>
 <pinref part="IC1" gate="B" pin="-IN"/>
 <wire x1="154.94" y1="251.46" x2="154.94" y2="241.3" width="0.1524" layer="91"/>
 <wire x1="154.94" y1="241.3" x2="172.72" y2="241.3" width="0.1524" layer="91"/>
 <junction x="172.72" y="241.3"/>
+<pinref part="R12" gate="/1" pin="E"/>
+<wire x1="190.5" y1="254" x2="198.12" y2="254" width="0.1524" layer="91"/>
+<junction x="190.5" y="254"/>
+<pinref part="R12" gate="/2" pin="E"/>
+<wire x1="198.12" y1="254" x2="213.36" y2="254" width="0.1524" layer="91"/>
+<junction x="198.12" y="254"/>
 </segment>
 </net>
 <net name="N$23" class="0">
@@ -20366,10 +20366,10 @@ distributor RS Components</description>
 <segment>
 <label x="220.98" y="248.92" size="1.778" layer="95"/>
 <pinref part="R12" gate="/2" pin="S"/>
-<pinref part="R12" gate="/1" pin="S"/>
-<wire x1="203.2" y1="248.92" x2="218.44" y2="248.92" width="0.1524" layer="91"/>
-<junction x="218.44" y="248.92"/>
 <wire x1="218.44" y1="248.92" x2="220.98" y2="248.92" width="0.1524" layer="91"/>
+<pinref part="R12" gate="/1" pin="S"/>
+<wire x1="218.44" y1="248.92" x2="203.2" y2="248.92" width="0.1524" layer="91"/>
+<junction x="218.44" y="248.92"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="A" pin="+IN"/>
@@ -20708,14 +20708,14 @@ distributor RS Components</description>
 <junction x="294.64" y="213.36"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="N$32" class="0">
 <segment>
-<pinref part="R12" gate="/1" pin="E"/>
-<pinref part="R12" gate="/2" pin="E"/>
-<wire x1="213.36" y1="243.84" x2="198.12" y2="243.84" width="0.1524" layer="91"/>
-<junction x="198.12" y="243.84"/>
+<pinref part="R12" gate="/1" pin="A"/>
 <pinref part="R13" gate="G$1" pin="1"/>
 <wire x1="198.12" y1="241.3" x2="198.12" y2="243.84" width="0.1524" layer="91"/>
+<pinref part="R12" gate="/2" pin="A"/>
+<wire x1="213.36" y1="243.84" x2="198.12" y2="243.84" width="0.1524" layer="91"/>
+<junction x="198.12" y="243.84"/>
 </segment>
 </net>
 </nets>
