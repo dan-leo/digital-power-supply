@@ -5,13 +5,7 @@ code/Release
 *.op.raw
 *.raw
 
-
-.s#*
-
-*.log
-*.net
-*.op.raw
-*.raw
+*.fft
 
 *.s#*
 
