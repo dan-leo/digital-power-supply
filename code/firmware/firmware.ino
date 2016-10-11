@@ -18,10 +18,11 @@
 // time between samples in milliseconds
 const int sampleInterval = 200; 
 // digital & analog I/O pin setup
-const int pwmVRefPin = 5;
-const int pwmIRefPin = 6;
+const int pwmVRefPin = 7;
+const int pwmIRefPin = 8;
 const int VsensePin = A0;
 const int IsensePin = A1;
+const int LEDPin = 13;
 // measurement variables
 int sensorBufferLength = 5;
 int analogSensorA0Value = 0;
@@ -90,6 +91,9 @@ void timedLoop() {
   updateVRefPwmValue();
   updateIRefPwmValue();
   sampleSensors();
+  // fix for some compilers: not called if deeply nested
+  analogWrite(pwmIRefPin,IRefPwmValue);
+  analogWrite(pwmVRefPin,VRefPwmValue);
 }
 
 // function for initializing sample buffers to all zeros
@@ -108,12 +112,20 @@ void pinSetup() {
   analogWrite(pwmVRefPin, 0);
   pinMode(pwmIRefPin, OUTPUT);
   analogWrite(pwmIRefPin, 0);
+  
+  pinMode(LEDPin, OUTPUT);
+  
+//  for (int pin=1;pin<=12;pin++){
+//    pinMode(pin, OUTPUT);
+//    analogWrite(pin, 50);
+//  }
 }
 
 // load settings from EEPROM
 void loadSettings() {
   // read from EEPROM
   isFirstRun = int(EEPROM.read(1));
+  digitalWrite(LEDPin,isFirstRun);
   isStreamingSensorData = int(EEPROM.read(2));
   sensorA0ZeroVoltReference = readSensorValueFromEEPROM(3);
   sensorA0OtherReference = readSensorValueFromEEPROM(5);
