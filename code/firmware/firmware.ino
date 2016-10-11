@@ -122,7 +122,7 @@ void loadSettings() {
   calOtherReferenceVoltage = readSensorValueFromEEPROM(11);
   calOtherReferenceCurrent = readSensorValueFromEEPROM(13);
 
-  // check wether this is the first run
+  // check whether this is the first run
   if (isFirstRun != isFirstRunDef) {
     isFirstRun = isFirstRunDef;
     isStreamingSensorData = isStreamingSensorDataDef;
