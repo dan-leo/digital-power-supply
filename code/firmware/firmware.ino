@@ -18,8 +18,8 @@
 // time between samples in milliseconds
 const int sampleInterval = 200; 
 // digital & analog I/O pin setup
-const int pwmVRefPin = 7;
-const int pwmIRefPin = 8;
+const int pwmVRefPin = 5;
+const int pwmIRefPin = 6;
 const int VsensePin = A0;
 const int IsensePin = A1;
 const int LEDPin = 13;
@@ -115,10 +115,10 @@ void pinSetup() {
   
   pinMode(LEDPin, OUTPUT);
   
-//  for (int pin=1;pin<=12;pin++){
-//    pinMode(pin, OUTPUT);
-//    analogWrite(pin, 50);
-//  }
+  for (int pin=1;pin<=12;pin++){
+    pinMode(pin, OUTPUT);
+    analogWrite(pin, 50);
+  }
 }
 
 // load settings from EEPROM
